@@ -53,10 +53,11 @@ function dataObjectUpdated() {
 }
 
 function removeItem() {
+  if (confirm('Tem certeza que deseja excluir o item?') == true) {
   var item = this.parentNode.parentNode;
   var parent = item.parentNode;
   var id = parent.id;
-  var value = item.innerText;
+  var value = item.innerText;}else{}
 
   if (id === 'todo') {
     data.todo.splice(data.todo.indexOf(value), 1);
